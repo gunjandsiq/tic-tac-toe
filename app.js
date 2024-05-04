@@ -14,11 +14,13 @@ boxes.forEach((box) => {
     box.addEventListener("click",() => {
         if (turn0) {
             box.innerText = "0";
+            box.style.color = "#134F5C";
             turn0 = false;
             count++;
         }
         else{
             box.innerText = "X";
+            box.style.color = "#FF9900";
             turn0 = true;
             count++;
         }
@@ -77,6 +79,7 @@ const enableBoxes = () => {
 
 const showWinner = (winner) => {
     msg.innerText = `Congratulation!!  Winner is ${winner}`;
+    msg.style.color = '#E06666'
     msgContainer.classList.remove("hide")
     disableBoxes();
 };
